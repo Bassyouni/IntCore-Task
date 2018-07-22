@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C10BD8CF7F44574831603F5 /* Pods_IntCoreTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2A61AD1F32FE99B6BA3248 /* Pods_IntCoreTask.framework */; };
 		524ADDCE21044D33005459A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524ADDCD21044D33005459A5 /* AppDelegate.swift */; };
 		524ADDD021044D33005459A5 /* MoviesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524ADDCF21044D33005459A5 /* MoviesListVC.swift */; };
 		524ADDD321044D33005459A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524ADDD121044D33005459A5 /* Main.storyboard */; };
@@ -48,6 +49,9 @@
 		524ADDF9210459B5005459A5 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		524ADDFB21045BAD005459A5 /* GradiantRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradiantRoundButton.swift; sourceTree = "<group>"; };
 		524ADDFD21047425005459A5 /* MoviesDiscussionFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDiscussionFeedTableViewCell.swift; sourceTree = "<group>"; };
+		6A2A61AD1F32FE99B6BA3248 /* Pods_IntCoreTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntCoreTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2903932273FA88FBFEB8E4D /* Pods-IntCoreTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntCoreTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-IntCoreTask/Pods-IntCoreTask.release.xcconfig"; sourceTree = "<group>"; };
+		CA57C68D21309D03CE132B28 /* Pods-IntCoreTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntCoreTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IntCoreTask/Pods-IntCoreTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C10BD8CF7F44574831603F5 /* Pods_IntCoreTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 			children = (
 				524ADDCC21044D33005459A5 /* IntCoreTask */,
 				524ADDCB21044D33005459A5 /* Products */,
+				C0E246D619BB0BC03A67CC07 /* Pods */,
+				650F741723C99E9CB7C436AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +175,23 @@
 			path = "UI Sub Classes";
 			sourceTree = "<group>";
 		};
+		650F741723C99E9CB7C436AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A2A61AD1F32FE99B6BA3248 /* Pods_IntCoreTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0E246D619BB0BC03A67CC07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA57C68D21309D03CE132B28 /* Pods-IntCoreTask.debug.xcconfig */,
+				C2903932273FA88FBFEB8E4D /* Pods-IntCoreTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 524ADDDC21044D3F005459A5 /* Build configuration list for PBXNativeTarget "IntCoreTask" */;
 			buildPhases = (
+				D3216016D778A796C71ABAC3 /* [CP] Check Pods Manifest.lock */,
 				524ADDC621044D33005459A5 /* Sources */,
 				524ADDC721044D33005459A5 /* Frameworks */,
 				524ADDC821044D33005459A5 /* Resources */,
+				D43E0413AADE555D5BF5062E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,6 +260,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D3216016D778A796C71ABAC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IntCoreTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D43E0413AADE555D5BF5062E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IntCoreTask/Pods-IntCoreTask-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IntCoreTask/Pods-IntCoreTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		524ADDC621044D33005459A5 /* Sources */ = {
@@ -395,16 +460,14 @@
 		};
 		524ADDDD21044D3F005459A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA57C68D21309D03CE132B28 /* Pods-IntCoreTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WED766W23U;
 				INFOPLIST_FILE = IntCoreTask/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Bassyouni.IntCoreTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "IntCoreTask/Resources/LoadingHUD/IntCoreTask-Bridging-Header.h";
@@ -416,16 +479,14 @@
 		};
 		524ADDDE21044D3F005459A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2903932273FA88FBFEB8E4D /* Pods-IntCoreTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WED766W23U;
 				INFOPLIST_FILE = IntCoreTask/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Bassyouni.IntCoreTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "IntCoreTask/Resources/LoadingHUD/IntCoreTask-Bridging-Header.h";

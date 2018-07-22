@@ -67,7 +67,8 @@ class MoviesTabelViewCell: UITableViewCell {
     
     func configureCell(forMovie movie: Movie)
     {
-        let imageStringUrl = imageBaseURl + movie.posterPath
+        imageWidth = 185
+        let imageStringUrl = imageBaseURl + "\(imageWidth)" + movie.posterPath
         
         moviePosterimageView.loadImageUsingUrlString(urlString: imageStringUrl)
         movieNameLabel.text = movie.title

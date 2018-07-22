@@ -84,8 +84,8 @@ class Movie
     }
     
     var voteAverage: Double {
-        set { voteAverage = newValue }
-        get { return voteAverage }
+        set { _voteAvergae = newValue }
+        get { return _voteAvergae }
     }
     
 }

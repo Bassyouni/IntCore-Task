@@ -15,7 +15,9 @@ let discoverMovies = "3/discover/movie?api_key="
 
 let apiKey = "ceb888b71023afda704f84975d2642b5"
 
-let imageBaseURl = "https://image.tmdb.org/t/p/w185"
+let imageBaseURl = "https://image.tmdb.org/t/p/w"
+
+var imageWidth: Int = 185
 
 let moviesUrlString = "\(moiveDBBaseUrl)\(discoverMovies)\(apiKey)"
 

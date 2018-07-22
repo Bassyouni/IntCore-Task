@@ -16,7 +16,8 @@ class MoviesDiscussionFeedTableViewCell: UITableViewCell {
     
     func configureCell(movie: Movie, comment: String)
     {
-        cellImageView.loadImageUsingUrlString(urlString: imageBaseURl + movie.backdropPath)
+        imageWidth = 400
+        cellImageView.loadImageUsingUrlString(urlString: imageBaseURl + "\(imageWidth)" + movie.backdropPath)
         descriptionLabel.text = movie.overview
         commentLabel.text = comment
     }

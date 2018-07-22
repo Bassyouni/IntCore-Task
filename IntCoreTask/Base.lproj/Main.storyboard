@@ -62,7 +62,7 @@
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip To Tommrow Land" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGk-GP-9UQ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip To Tommrow Land" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="LGk-GP-9UQ">
                                             <rect key="frame" x="59" y="214" width="73" height="10"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="7"/>
                                             <color key="textColor" red="0.57585371060000001" green="0.37308576119999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,7 +105,7 @@
                                                 <constraint firstAttribute="height" constant="1" id="pGw-aG-3vF"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bassyouni" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1f-pt-udN">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1f-pt-udN">
                                             <rect key="frame" x="222" y="212" width="42" height="12.5"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="9"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -132,6 +132,37 @@
                                                 </button>
                                             </subviews>
                                         </stackView>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FPG-KT-arg" customClass="CosmosView" customModule="Cosmos">
+                                            <rect key="frame" x="222" y="230" width="68" height="10"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                    <color key="value" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                    <color key="value" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                    <color key="value" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSz-BB-Omd">
+                                            <rect key="frame" x="19" y="8" width="30" height="36"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="31"/>
+                                            <state key="normal" title="+">
+                                                <color key="titleColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -141,6 +172,7 @@
                                         <constraint firstItem="exU-Al-VI1" firstAttribute="top" secondItem="J90-wO-oqk" secondAttribute="top" id="8eU-xh-n02"/>
                                         <constraint firstAttribute="trailing" secondItem="exU-Al-VI1" secondAttribute="trailing" id="9OW-Ge-t9H"/>
                                         <constraint firstItem="M1f-pt-udN" firstAttribute="top" secondItem="exU-Al-VI1" secondAttribute="bottom" constant="-13" id="9X7-wY-5Ln"/>
+                                        <constraint firstItem="FPG-KT-arg" firstAttribute="top" secondItem="exU-Al-VI1" secondAttribute="bottom" constant="5" id="BB4-oj-gZw"/>
                                         <constraint firstItem="9Rn-4Y-aMg" firstAttribute="leading" secondItem="J90-wO-oqk" secondAttribute="leading" constant="8" id="D0l-go-wZu"/>
                                         <constraint firstItem="DTZ-m4-wlN" firstAttribute="leading" secondItem="ZeD-Bj-mBm" secondAttribute="trailing" constant="8" id="EpL-Hw-lCD"/>
                                         <constraint firstItem="9Rn-4Y-aMg" firstAttribute="top" secondItem="CKU-NZ-kRZ" secondAttribute="bottom" constant="8" id="Flu-xA-NzL"/>
@@ -152,15 +184,18 @@
                                         <constraint firstItem="CKU-NZ-kRZ" firstAttribute="top" secondItem="exU-Al-VI1" secondAttribute="bottom" constant="25" id="Nlm-uP-j9i"/>
                                         <constraint firstItem="ZeD-Bj-mBm" firstAttribute="top" secondItem="exU-Al-VI1" secondAttribute="bottom" constant="-12" id="Ow0-z9-P3H"/>
                                         <constraint firstAttribute="bottom" secondItem="9Rn-4Y-aMg" secondAttribute="bottom" constant="8" id="RxJ-O0-7Ig"/>
+                                        <constraint firstItem="PSz-BB-Omd" firstAttribute="top" secondItem="J90-wO-oqk" secondAttribute="top" constant="10" id="Ycl-9B-YA7"/>
                                         <constraint firstItem="6TQ-FT-Tjh" firstAttribute="leading" secondItem="J90-wO-oqk" secondAttribute="leading" constant="8" id="Zuf-b4-nfF"/>
                                         <constraint firstItem="CKU-NZ-kRZ" firstAttribute="leading" secondItem="J90-wO-oqk" secondAttribute="leading" id="aiD-YZ-Wka"/>
                                         <constraint firstItem="ZeD-Bj-mBm" firstAttribute="leading" secondItem="6TQ-FT-Tjh" secondAttribute="trailing" constant="7.5" id="cQ1-iy-gCD"/>
+                                        <constraint firstItem="FPG-KT-arg" firstAttribute="leading" secondItem="UAu-V2-tNp" secondAttribute="trailing" constant="5" id="dae-Tf-0yR"/>
                                         <constraint firstItem="UAu-V2-tNp" firstAttribute="leading" secondItem="LGk-GP-9UQ" secondAttribute="trailing" constant="55" id="idS-Gk-iwP"/>
                                         <constraint firstAttribute="trailing" secondItem="9Rn-4Y-aMg" secondAttribute="trailing" constant="8" id="ivX-bu-xXx"/>
                                         <constraint firstAttribute="trailing" secondItem="nEs-Pf-2wG" secondAttribute="trailing" constant="10" id="jgQ-4T-5DA"/>
                                         <constraint firstItem="ZeD-Bj-mBm" firstAttribute="height" secondItem="6TQ-FT-Tjh" secondAttribute="height" id="m8R-UB-26u"/>
                                         <constraint firstItem="M1f-pt-udN" firstAttribute="leading" secondItem="UAu-V2-tNp" secondAttribute="trailing" constant="5" id="osm-ij-glY"/>
                                         <constraint firstItem="exU-Al-VI1" firstAttribute="leading" secondItem="J90-wO-oqk" secondAttribute="leading" id="ufx-SI-hDB"/>
+                                        <constraint firstItem="PSz-BB-Omd" firstAttribute="leading" secondItem="J90-wO-oqk" secondAttribute="leading" constant="10" id="vWs-Oy-L2X"/>
                                         <constraint firstItem="DTZ-m4-wlN" firstAttribute="top" secondItem="LGk-GP-9UQ" secondAttribute="bottom" constant="6" id="yu3-un-z9D"/>
                                         <constraint firstAttribute="height" constant="300" id="zkA-Jz-2SX"/>
                                     </constraints>
@@ -333,6 +368,10 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="closeBtn" destination="PSz-BB-Omd" id="dqq-RZ-hef"/>
+                        <outlet property="movieNameLabel" destination="LGk-GP-9UQ" id="Q5C-lQ-dRM"/>
+                        <outlet property="posterImageView" destination="exU-Al-VI1" id="9qs-qP-rF5"/>
+                        <outlet property="starRatingView" destination="FPG-KT-arg" id="a8q-gL-R3v"/>
                         <outlet property="tableView" destination="UA4-O0-YNO" id="lck-Ut-Z6U"/>
                     </connections>
                 </viewController>

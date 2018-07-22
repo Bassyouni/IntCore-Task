@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class CurvedImageView: UIImageView {
+class CurvedImageView: AsyncImageView {
     
     func pathCurvedForView(givenView: UIView, curvedPercent:CGFloat) ->UIBezierPath
     {
