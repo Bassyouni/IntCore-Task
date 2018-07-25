@@ -15,6 +15,12 @@ class MoviesListVC: UITableViewController {
     var movies = [Movie]()
     let moviesTableCellIdentifer = "MoviesTabelViewCell"
     
+    let refreshConrtol: UIRefreshControl = {
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(handleRefresh(refreshControl:)), for: .valueChanged)
+        return refresh
+    }()
+    
     //MARK:- view's methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +44,7 @@ class MoviesListVC: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        tableView.addSubview(refreshConrtol)
         
     }
     
@@ -70,6 +77,7 @@ class MoviesListVC: UITableViewController {
                         
                         if let results = dataDict["results"] as? [Dictionary<String, AnyObject>]
                         {
+                            self.movies.removeAll()
                             for movieDict in results
                             {
                                 let tempMovie = Movie()
@@ -91,6 +99,19 @@ class MoviesListVC: UITableViewController {
             completion()
             }.resume()
     }
+    
+    @objc func handleRefresh(refreshControl: UIRefreshControl)
+    {
+        grabMoviesFromAPi
+        {
+            DispatchQueue.main.async
+            {
+                self.tableView.reloadData()
+                self.refreshConrtol.endRefreshing()
+            }
+        }
+    }
+    
 }
 
 //MARK: - table dataSource
